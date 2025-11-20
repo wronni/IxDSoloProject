@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FairPlay - Smart Team Organizer | Personas</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        .header p {
+            font-size: 1.2rem;
+            opacity: 0.95;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .personas-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .persona-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .persona-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+        }
+
+        .persona-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .persona-header h2 {
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .persona-meta {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 1rem;
+            font-size: 0.95rem;
+        }
+
+        .persona-meta span {
+            background: rgba(255,255,255,0.2);
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+        }
+
+        .persona-content {
+            padding: 2rem;
+        }
+
+        .persona-section {
+            margin-bottom: 1.5rem;
+        }
+
+        .persona-section h3 {
+            color: #667eea;
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            border-bottom: 2px solid #667eea;
+            padding-bottom: 0.3rem;
+        }
+
+        .persona-section ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .persona-section ul li {
+            padding-left: 1.5rem;
+            margin-bottom: 0.5rem;
+            position: relative;
+        }
+
+        .persona-section ul li:before {
+            content: "▸";
+            position: absolute;
+            left: 0;
+            color: #667eea;
+            font-weight: bold;
+        }
+
+        .persona-section p {
+            color: #555;
+            line-height: 1.7;
+        }
+
+        .goals-list li:before { content: "🎯"; }
+        .frustrations-list li:before { content: "⚠️"; }
+        .needs-list li:before { content: "✓"; }
+        .opportunities-list li:before { content: "💡"; }
+
+        @media (max-width: 768px) {
+            .personas-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .header h1 {
+                font-size: 2rem;
+            }
+
+            .persona-meta {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+        }
+
+        .quote-section {
+            background: #f8f9fa;
+            border-left: 4px solid #667eea;
+            padding: 1rem 1.5rem;
+            margin: 1.5rem 0;
+            font-style: italic;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>FairPlay - Smart Team Organizer</h1>
+        <p>User Personas for Fair, Balanced, and Fun Casual Sports</p>
+    </div>
+
+    <div class="container">
+        <div class="personas-grid">
+            <!-- Persona 1: Jake -->
+            <div class="persona-card">
+                <div class="persona-header">
+                    <h2>Jake - The Casual Athlete</h2>
+                    <div class="persona-meta">
+                        <span>Age: 25</span>
+                        <span>Casual Athlete</span>
+                    </div>
+                </div>
+                <div class="persona-content">
+                    <div class="persona-section">
+                        <p>Jake represents the casual sports enthusiast who wants to stay active and enjoy competitive games without the administrative burden of organizing teams and managing logistics. He values fairness and balance in gameplay but doesn't want to invest significant time in coordination.</p>
+                    </div>
+
+                    <div class="quote-section">
+                        "I just want to show up and play without worrying about whether teams will be balanced or if enough people will attend."
+                    </div>
+
+                    <div class="persona-section">
+                        <h3>Goals</h3>
+                        <ul class="goals-list">
+                            <li>Play soccer weekly without the hassle of organizing</li>
+                            <li>Participate in competitive yet friendly games</li>
+                            <li>Avoid spending time on team coordination and logistics</li>
+                        </ul>
+                    </div>
+
+                    <div class="persona-section">
+                        <h3>Frustrations</h3>
+                        <ul class="frustrations-list">
+                            <li>Teams are often uneven or unorganized</li>
+                            <li>Difficulty finding balanced games that feel fair</li>
+                            <li>Time wasted on coordination instead of playing</li>
+                            <li>Inconsistent quality of pickup games</li>
+                        </ul>
+                    </div>
+
+                    <div class="persona-section">
+                        <h3>Motivation</h3>
+                        <p>Wants fair, balanced, fun games that feel competitive but friendly. Jake is motivated by the desire to simply show up and play without worrying about whether teams will be balanced or if enough people will attend.</p>
+                    </div>
+
+                    <div class="persona-section">
+                        <h3>User Needs</h3>
+                        <ul class="needs-list">
+                            <li>Quick and easy way to find and join games</li>
+                            <li>Automated team balancing to ensure fair matches</li>
+                            <li>Reliable player commitment system</li>
+                            <li>Minimal organizational overhead</li>
+                            <li>Competitive but friendly atmosphere</li>
+                        </ul>
+                    </div>
+
+                    <div class="persona-section">
+                        <h3>Design Opportunities</h3>
+                        <ul class="opportunities-list">
+                            <li>Implement AI-driven team balancing algorithms</li>
+                            <li>Create simple join/leave mechanisms for games</li>
+                            <li>Provide skill-level matching</li>
+                            <li>Build in reliability features (attendance tracking, reputation system)</li>
+                            <li>Enable quick game discovery based on location and schedule</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Persona 2: Lila -->
+            <div class="persona-card">
+                <div class="persona-header">
+                    <h2>Lila - The College Student</h2>
+                    <div class="persona-meta">
+                        <span>Age: 19</span>
+                        <span>College Student</span>
+                    </div>
+                </div>
+                <div class="persona-content">
+                    <div class="persona-section">
+                        <p>Lila represents the young, socially-motivated player who uses sports as a way to meet new people and stay active. She faces challenges finding games at her skill level and often feels excluded from established groups. She needs an inclusive platform that helps her find welcoming sports experiences that fit her busy student schedule.</p>
+                    </div>
+
+                    <div class="quote-section">
+                        "I want to find communities where I feel welcomed regardless of my skill level, and connect with people through sports."
+                    </div>
+
+                    <div class="persona-section">
+                        <h3>Goals</h3>
+                        <ul class="goals-list">
+                            <li>Join pickup basketball games to meet people and stay active</li>
+                            <li>Find inclusive sports communities</li>
+                            <li>Participate in games that fit her class schedule</li>
+                            <li>Build social connections through sports</li>
+                        </ul>
+                    </div>
+
+                    <div class="persona-section">
+                        <h3>Frustrations</h3>
+                        <ul class="frustrations-list">
+                            <li>Hard to find games at her skill level</li>
+                            <li>Often feels left out of teams</li>
+                            <li>Established groups can be intimidating or unwelcoming</li>
+                            <li>Limited time due to academic commitments</li>
+                            <li>Uncertainty about whether she'll be welcomed at pickup games</li>
+                        </ul>
+                    </div>
+
+                    <div class="persona-section">
+                        <h3>Motivation</h3>
+                        <p>Looking for inclusive, social sports experiences that fit her schedule. Lila is motivated by the social aspect of sports and wants to find communities where she feels welcomed regardless of her skill level.</p>
+                    </div>
+
+                    <div class="persona-section">
+                        <h3>User Needs</h3>
+                        <ul class="needs-list">
+                            <li>Skill-level filtering to find appropriate games</li>
+                            <li>Welcoming, inclusive game environments</li>
+                            <li>Flexible scheduling that works with student life</li>
+                            <li>Social features to connect with other players</li>
+                            <li>Low barrier to entry for new participants</li>
+                            <li>Clear communication about game expectations</li>
+                        </ul>
+                    </div>
+
+                    <div class="persona-section">
+                        <h3>Design Opportunities</h3>
+                        <ul class="opportunities-list">
+                            <li>Implement skill-level indicators and matching</li>
+                            <li>Create beginner-friendly game categories</li>
+                            <li>Build social profiles and connection features</li>
+                            <li>Provide schedule flexibility and easy booking</li>
+                            <li>Include inclusivity ratings or tags for games</li>
+                            <li>Enable pre-game communication to reduce anxiety</li>
+                            <li>Show player diversity and welcoming indicators</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Persona 3: Marcus -->
+            <div class="persona-card">
+                <div class="persona-header">
+                    <h2>Marcus - The Organizer</h2>
+                    <div class="persona-meta">
+                        <span>Age: 34</span>
+                        <span>Game Organizer</span>
+                    </div>
+                </div>
+                <div class="persona-content">
+                    <div class="persona-section">
+                        <p>Marcus represents the dedicated organizer who loves sports and wants to create consistent, quality games for his community. However, he's frustrated by the constant administrative burden of managing uneven teams, dealing with no-shows, and handling all the logistics manually. He needs a solution that automates the organizational aspects so he can focus on playing.</p>
+                    </div>
+
+                    <div class="quote-section">
+                        "I want to maintain my role as community organizer while significantly reducing the time and stress involved in managing games."
+                    </div>
+
+                    <div class="persona-section">
+                        <h3>Goals</h3>
+                        <ul class="goals-list">
+                            <li>Set up consistent weekend games with minimal effort</li>
+                            <li>Create reliable, recurring sports events</li>
+                            <li>Spend more time playing and less time organizing</li>
+                            <li>Build a dependable community of players</li>
+                        </ul>
+                    </div>
+
+                    <div class="persona-section">
+                        <h3>Frustrations</h3>
+                        <ul class="frustrations-list">
+                            <li>Constantly dealing with uneven teams</li>
+                            <li>Managing no-shows and last-minute cancellations</li>
+                            <li>Manual team balancing takes significant time</li>
+                            <li>Communication overhead (reminders, confirmations, updates)</li>
+                            <li>Difficulty maintaining consistent game quality</li>
+                            <li>Administrative burden reduces his own playing time</li>
+                        </ul>
+                    </div>
+
+                    <div class="persona-section">
+                        <h3>Motivation</h3>
+                        <p>Wants an app that handles logistics automatically so he can just play. Marcus is motivated by the desire to maintain his role as community organizer while significantly reducing the time and stress involved in managing games.</p>
+                    </div>
+
+                    <div class="persona-section">
+                        <h3>User Needs</h3>
+                        <ul class="needs-list">
+                            <li>Automated team balancing features</li>
+                            <li>No-show management and reliability tracking</li>
+                            <li>Recurring game scheduling tools</li>
+                            <li>Automated player notifications and reminders</li>
+                            <li>Easy roster management</li>
+                            <li>Backup player systems for cancellations</li>
+                            <li>Analytics on game attendance and player reliability</li>
+                        </ul>
+                    </div>
+
+                    <div class="persona-section">
+                        <h3>Design Opportunities</h3>
+                        <ul class="opportunities-list">
+                            <li>Build powerful automation for recurring games</li>
+                            <li>Implement smart team balancing algorithms</li>
+                            <li>Create attendance prediction and reliability scoring</li>
+                            <li>Develop automated communication systems</li>
+                            <li>Provide organizer dashboard with game analytics</li>
+                            <li>Enable waitlist and substitute management</li>
+                            <li>Build reputation systems to incentivize reliability</li>
+                            <li>Offer one-click game setup from templates</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
