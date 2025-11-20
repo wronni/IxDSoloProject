@@ -165,6 +165,83 @@
             object-fit: cover;
             object-position: center;
         }
+
+        .section-divider {
+            margin: 4rem 0 3rem 0;
+            text-align: center;
+        }
+
+        .section-divider h2 {
+            font-size: 2rem;
+            color: #333;
+            margin-bottom: 0.5rem;
+        }
+
+        .section-divider p {
+            color: #666;
+            font-size: 1.1rem;
+        }
+
+        .competitor-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .competitor-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+        }
+
+        .competitor-header {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .competitor-header h3 {
+            font-size: 1.8rem;
+            margin-bottom: 0.3rem;
+        }
+
+        .competitor-header .subtitle {
+            font-size: 0.95rem;
+            opacity: 0.9;
+        }
+
+        .competitor-content {
+            padding: 2rem;
+        }
+
+        .competitor-section {
+            margin-bottom: 1.5rem;
+        }
+
+        .competitor-section h4 {
+            color: #f5576c;
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            border-bottom: 2px solid #f5576c;
+            padding-bottom: 0.3rem;
+        }
+
+        .pros-list li:before { content: "✓"; color: #28a745; }
+        .cons-list li:before { content: "✗"; color: #dc3545; }
+        .gap-list li:before { content: "→"; color: #f5576c; }
+
+        .company-description {
+            background: #f8f9fa;
+            padding: 1rem;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            color: #555;
+        }
     </style>
 </head>
 <body>
@@ -384,6 +461,167 @@
                             <li>Enable waitlist and substitute management</li>
                             <li>Build reputation systems to incentivize reliability</li>
                             <li>Offer one-click game setup from templates</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Competitive Analysis Section -->
+        <div class="section-divider">
+            <h2>Competitive Analysis</h2>
+            <p>Understanding the Market Landscape</p>
+        </div>
+
+        <div class="personas-grid">
+            <!-- Competitor 1: TeamLinkt -->
+            <div class="competitor-card">
+                <div class="competitor-header">
+                    <h3>TeamLinkt</h3>
+                    <div class="subtitle">League and Team Management Platform</div>
+                </div>
+                <div class="competitor-content">
+                    <div class="company-description">
+                        TeamLinkt is a comprehensive league and team management platform designed for coaches, players, and league administrators in organized sports settings. It focuses on administrative efficiency for organized sports programs.
+                    </div>
+
+                    <div class="competitor-section">
+                        <h4>Pros</h4>
+                        <ul class="pros-list">
+                            <li>Great for organized sports leagues</li>
+                            <li>Robust scheduling tools</li>
+                            <li>Team roster management</li>
+                            <li>Communication features</li>
+                            <li>Multi-sport support</li>
+                            <li>Professional interface</li>
+                        </ul>
+                    </div>
+
+                    <div class="competitor-section">
+                        <h4>Cons</h4>
+                        <ul class="cons-list">
+                            <li>Too complex for casual players</li>
+                            <li>Not AI-driven</li>
+                            <li>Requires league structure</li>
+                            <li>Administrative overhead</li>
+                            <li>No automated balancing</li>
+                            <li>Cost barrier</li>
+                        </ul>
+                    </div>
+
+                    <div class="competitor-section">
+                        <h4>FairPlay Opportunity Gap</h4>
+                        <ul class="gap-list">
+                            <li>AI-driven team balancing for fairness</li>
+                            <li>Casual player focus and simplicity</li>
+                            <li>Automated team formation</li>
+                            <li>Low barrier to entry for pickup games</li>
+                            <li>Inclusive design for all skill levels</li>
+                            <li>Minimal organizational overhead</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Competitor 2: PickupHub -->
+            <div class="competitor-card">
+                <div class="competitor-header">
+                    <h3>PickupHub</h3>
+                    <div class="subtitle">Local Pickup Game Discovery Platform</div>
+                </div>
+                <div class="competitor-content">
+                    <div class="company-description">
+                        PickupHub is a platform designed to help users find and join local pickup games in their area. With a large user base, it makes game discovery easy but lacks intelligent team balancing features.
+                    </div>
+
+                    <div class="competitor-section">
+                        <h4>Pros</h4>
+                        <ul class="pros-list">
+                            <li>Good for discovery</li>
+                            <li>Large user base</li>
+                            <li>Location-based search</li>
+                            <li>Simple joining process</li>
+                            <li>Multi-sport coverage</li>
+                            <li>Social features</li>
+                            <li>Low commitment</li>
+                        </ul>
+                    </div>
+
+                    <div class="competitor-section">
+                        <h4>Cons</h4>
+                        <ul class="cons-list">
+                            <li>No automated team balancing</li>
+                            <li>No AI fairness features</li>
+                            <li>Quality inconsistency</li>
+                            <li>No skill matching</li>
+                            <li>Uneven teams common</li>
+                            <li>No-show problems</li>
+                            <li>Minimal organizer support</li>
+                        </ul>
+                    </div>
+
+                    <div class="competitor-section">
+                        <h4>FairPlay Opportunity Gap</h4>
+                        <ul class="gap-list">
+                            <li>AI-driven team balancing algorithms</li>
+                            <li>Automated fairness and skill matching</li>
+                            <li>Real-time team formation</li>
+                            <li>Competitive balance assurance</li>
+                            <li>Advanced organizer tools</li>
+                            <li>Reliability and attendance tracking</li>
+                            <li>Game quality guarantees</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Competitor 3: OpenSports -->
+            <div class="competitor-card">
+                <div class="competitor-header">
+                    <h3>OpenSports</h3>
+                    <div class="subtitle">Local Sports Event Organization Platform</div>
+                </div>
+                <div class="competitor-content">
+                    <div class="company-description">
+                        OpenSports organizes local sports games and events with a focus on logistics and event management. Strong in payment processing and RSVPs, but lacks gameplay fairness features.
+                    </div>
+
+                    <div class="competitor-section">
+                        <h4>Pros</h4>
+                        <ul class="pros-list">
+                            <li>Handles payments well</li>
+                            <li>RSVP management</li>
+                            <li>Event organization</li>
+                            <li>Venue coordination</li>
+                            <li>Financial tracking</li>
+                            <li>Automated reminders</li>
+                            <li>Capacity management</li>
+                        </ul>
+                    </div>
+
+                    <div class="competitor-section">
+                        <h4>Cons</h4>
+                        <ul class="cons-list">
+                            <li>Focused on logistics, not gameplay</li>
+                            <li>No team balancing</li>
+                            <li>No fairness features</li>
+                            <li>Administrative focus</li>
+                            <li>Missing AI intelligence</li>
+                            <li>Limited player experience</li>
+                            <li>No skill-level matching</li>
+                        </ul>
+                    </div>
+
+                    <div class="competitor-section">
+                        <h4>FairPlay Opportunity Gap</h4>
+                        <ul class="gap-list">
+                            <li>AI-driven team balancing</li>
+                            <li>Focus on game quality and fairness</li>
+                            <li>Automated competitive balance</li>
+                            <li>Skill-level matching algorithms</li>
+                            <li>Player-centric experience design</li>
+                            <li>Team formation intelligence</li>
+                            <li>Fun and fairness prioritization</li>
                         </ul>
                     </div>
                 </div>
